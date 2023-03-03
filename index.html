@@ -68,9 +68,42 @@
           </div>
         </section>
       </inner-column>
+
       <section class="todo-list">
         <inner-column class="todo-list__wrapper">
           <section class="todo-list__heading flex">
             <i class="fa-solid fa-clipboard-check main-heading"></i>
             <h2 class="secondary-heading">Todo List</h2>
           </section>
+
+          <!-- <form id="item-form" class="todo-list__form flex">
+            <input
+              type="text"
+              class="form-input secondary-text"
+              id="item-input"
+              name="item"
+              placeholder="Enter Task"
+            />
+            <button type="submit" class="btn secondary-text">
+              <i class="fa-solid fa-plus"></i> Add Item
+            </button>
+          </form> -->
+
+          <form id="item-form" class="todo-list__form flex">
+            <input
+              type="text"
+              id="item-input"
+              class="form-input secondary-text"
+              name="item"
+              placeholder="Add New Todo..."
+            />
+
+            <button type="submit" class="btn secondary-text">
+              <i class="fa-solid fa-plus"></i> Add Item
+            </button>
+          </form>
+        </inner-column>
+      </section>
+    </main>
+  </body>
+</html>
