@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PomoTodo</title>
+    <meta name="og:description" content="[[Description]]" />
+    <meta property="og:title" content="[[Description]]" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="[[meta-image]]" />
+    <meta property="og:image:type" content="[[meta-image]]" />
+    <!-- <link rel="shortcut icon" type="image/jpg" href="[[favicon]]" /> -->
+    <link rel="icon" href="data:;base64,=" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-theme="pomodoro">
+    <header class="flex">
+      <inner-column class="header__wrapper flex">
+        <section class="header__logo flex">
+          <div class="header__logo__image">
+            <picture>
+              <img src="images/pomotodo-logo2.svg" alt="" />
+            </picture>
+          </div>
+          <h1 class="header__logo__heading main-heading">PomoTodo</h1>
+        </section>
+        <div class="header__nav-link">
+          <p class="secondary-text">
+            <a href="#about-Project">About</a>
+          </p>
+        </div>
+      </inner-column>
+    </header>
+    <main>
+      <inner-column class="main__pomodoro__wrapper">
+        <section>
+          <p class="main__date tertiary-heading"></p>
+        </section>
+        <section class="main__card flex">
+          <div class="main__card__states flex">
+            <button id="pomodoro" class="secondary-text">Pomodoro</button>
+            <button id="short-break" class="secondary-text">Short Break</button>
+            <button id="long-break" class="secondary-text">Long Break</button>
+          </div>
+
+          <div class="main__card__timer">25:00</div>
+
+          <div class="main__card__start flex">
+            <div class="main__card__encourage">
+              <p class="secondary-text"></p>
+            </div>
+            <div class="main__card__buttons flex">
+              <button id="start">Start</button>
+              <button id="stop" class="hidden">Stop</button>
+              <button id="reset" class="hidden">
+                <i class="fa-solid fa-rotate"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+      </inner-column>
+      <section class="todo-list">
+        <inner-column class="todo-list__wrapper">
+          <section class="todo-list__heading flex">
+            <i class="fa-solid fa-clipboard-check main-heading"></i>
+            <h2 class="secondary-heading">Todo List</h2>
+          </section>
