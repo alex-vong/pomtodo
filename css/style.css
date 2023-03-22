@@ -23,6 +23,7 @@ main {
 
 .logo {
   gap: 5px;
+  cursor: pointer;
 }
 .logo__image picture img {
   max-width: clamp(24px, 2.5vw, 30px);
