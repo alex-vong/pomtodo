@@ -1,5 +1,5 @@
 const timer = document.querySelector('.main__card__timer'),
-  logo = document.querySelector('.header__logo'),
+  logo = document.querySelector('.logo'),
   startButton = document.getElementById('start'),
   stopButton = document.getElementById('stop'),
   resetButton = document.getElementById('reset'),
