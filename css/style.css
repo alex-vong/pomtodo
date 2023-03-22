@@ -21,14 +21,14 @@ main {
   border-bottom: 1px solid rgba(168, 168, 168, 0.5);
 }
 
-.header__logo {
+.logo {
   gap: 5px;
 }
-.header__logo__image picture img {
+.logo__image picture img {
   max-width: clamp(24px, 2.5vw, 30px);
 }
 
-.header__logo__heading {
+.logo__heading {
   font-weight: 700;
 }
 
@@ -293,16 +293,17 @@ i.deleted-item {
   gap: 50px;
 }
 
-.about .about-docs__heading {
-  gap: 40px;
-}
-
-.about h2 {
+.about h2.secondary-heading {
+  font-size: clamp(24px, 2.3vw, 36px);
   line-height: 1.3;
 }
 
 .about h3 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.about .secondary-text {
+  font-weight: 500;
 }
 
 .about .secondary-text {
@@ -314,6 +315,12 @@ i.deleted-item {
 footer {
   /* text-align: center; */
   background-color: var(--background);
+  padding: 30px 0;
+}
+
+footer inner-column.flex {
+  flex-direction: column;
+  align-items: center;
 }
 
 footer a {
@@ -323,5 +330,5 @@ footer a {
 
 footer h4 {
   font-weight: 500;
-  padding: 30px 0;
+  padding: 10px 0;
 }
