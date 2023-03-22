@@ -1,0 +1,22 @@
+/* STRUCTURE */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Varela Round', sans-serif;
+  min-height: 100vh; /* for the footer */
+  background-color: var(--white);
+
+  color: var(--white);
+  overflow-x: hidden;
+  /* overflow: hidden; */
+  -webkit-font-smoothing: antialiased;
+  list-style: none;
+  transition: var(--transition-05);
+}
+
+inner-column {
+  display: block;
+  width: min(95%, 600px); /* could be a variable in settings */
+  margin-right: auto;
+  margin-left: auto;
+}

@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PomoTodo</title>
-    <meta name="og:description" content="[[Description]]" />
-    <meta property="og:title" content="[[Description]]" />
+    <title>PomoTodo - Be Productive Today!</title>
+    <meta name="og:description" content="PomTodo is a web application that integrates two
+    essential productivity tools - a pomodoro timer and a todo list." />
+    <meta property="og:title" content="PomTodo - An easier way to be productive!" />
     <meta property="og:type" content="" />
     <meta property="og:url" content="" />
-    <meta property="og:image" content="[[meta-image]]" />
-    <meta property="og:image:type" content="[[meta-image]]" />
-    <!-- <link rel="shortcut icon" type="image/jpg" href="[[favicon]]" /> -->
-    <link rel="icon" href="data:;base64,=" />
+    <meta property="og:image" content="https://alexvong.dev/images/pomtodo-meta.png" />
+    <meta property="og:image:type" content="https://alexvong.dev/images/pomtodo-meta.png" />
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.svg" />
+  
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -20,7 +21,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="app.js" defer></script>
+    <script src="pomodoro.js" defer></script>
+    <script src="todo.js" defer></script>
   </head>
   <body data-theme="pomodoro">
     <header class="flex">
@@ -31,17 +33,18 @@
               <img src="images/pomotodo-logo2.svg" alt="" />
             </picture>
           </div>
-          <h1 class="header__logo__heading main-heading">PomoTodo</h1>
+          <h1 class="header__logo__heading main-heading">PomTodo</h1>
         </section>
-        <div class="header__nav-link">
+        <div class="header__nav-link btn-bg">
           <p class="secondary-text">
-            <a href="#about-Project">About</a>
+            <a href="#about">About</a>
           </p>
         </div>
       </inner-column>
     </header>
     <main>
-      <inner-column class="main__pomodoro__wrapper">
+      <section  class="main__pomodoro__wrapper">
+      <inner-column>
         <section>
           <p class="main__date tertiary-heading"></p>
         </section>
@@ -52,7 +55,11 @@
             <button id="long-break" class="secondary-text">Long Break</button>
           </div>
 
-          <div class="main__card__timer">25:00</div>
+          <div class="main__card__digitals flex">
+
+            <div class="main__card__timer">25:00</div>
+            <div class="main__card__intervals primary-text">0/4</div>
+          </div>
 
           <div class="main__card__start flex">
             <div class="main__card__encourage">
@@ -68,9 +75,174 @@
           </div>
         </section>
       </inner-column>
-      <section class="todo-list">
-        <inner-column class="todo-list__wrapper">
+    </section>
+
+    <section class="todo-list">
+      <inner-column>
+        <section class="todo-list-wrapper flex">
           <section class="todo-list__heading flex">
             <i class="fa-solid fa-clipboard-check main-heading"></i>
             <h2 class="secondary-heading">Todo List</h2>
           </section>
+
+          <form id="item-form" class="todo-list__form flex">
+            <input
+              type="text"
+              class="form-input secondary-text"
+              id="item-input"
+              name="item"
+              placeholder="Enter Todo"
+            />
+            <button type="submit" class="btn secondary-text btn-bg">
+              <i class="fa-solid fa-plus"></i> Add Task
+            </button>
+          </form>
+
+          <div class="tl-status flex">
+            <div class="tl-status-wrapper flex">
+              <button>
+                <span class="tl-status-active secondary-text" id="all"
+                  >All</span
+                >
+              </button>
+              <button>
+                <span class="secondary-text" id="pending">Pending</span>
+              </button>
+              <button>
+                <span class="secondary-text" id="completed">Completed</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="todo-list-filter">
+            <input
+              type="text"
+              class="form-input-filter secondary-text"
+              id="filter"
+              placeholder="Filter Todos"
+            />
+          </div>
+
+          <ul id="item-list" class="todo-list-ul flex"></ul>
+
+          <button
+            id="clear"
+            class="btn-clear btn-bg secondary-text"
+            form="item-form"
+          >
+            Clear All
+          </button>
+        </section>
+      </inner-column>
+    </section>
+    </main>
+
+
+
+    <section id='about' class="about">
+      <inner-column class="flex">
+        <h2 class="secondary-heading">
+          An online application to boost your daily productivity
+        </h2>
+
+        <section class="about-docs">
+          <div class="about-docs__heading flex">
+            <div>
+            <h3 class="quaternary-heading">What is PomTodo?
+            </h3>
+            <p class="secondary-text">
+              PomTodo is a web application that integrates two
+              essential productivity tools - a pomodoro timer and a todo list.
+              Its purpose is to assist users in remaining focused on any given
+              task, be it studying, writing, designing, or coding.
+            </p>
+          </div>
+            <div>
+              <h3 class="quaternary-heading">
+                Why did I build this application?
+              </h3>
+              <p class="secondary-text">
+                I was inspired by the Pomodoro Technique and the daily to-do
+                list method, which I found to be very effective in managing my
+                time and productivity. However, I struggled to find an
+                application that integrated both methods seamlessly. That's when
+                I created PomTodo, a productivity app that combines the best of both worlds. With
+                PomTodo, I can easily break down my tasks into manageable
+                chunks using the Pomodoro Technique, while also keeping track of
+                my daily to-do list.
+              </p>
+            </div>
+            <div>
+              <h3 class="quaternary-heading">
+                What is the Pomodoro Technique?
+              </h3>
+              <p class="secondary-text">
+                The Pomodoro Technique is a time management method that was
+                developed by Francesco Cirillo in the late 1980s. The technique
+                involves breaking down work into intervals, typically 25 minutes
+                in length, separated by short breaks. Each interval is known as
+                a pomodoro, which is Italian for tomato, named after the
+                tomato-shaped kitchen timer that Cirillo used to time his work
+                sessions. After four pomodoros, a longer break of around 15 to
+                30 minutes is taken. The technique is designed to improve focus
+                and productivity by reducing the impact of internal and external
+                distractions on work performance. It is widely used in various
+                fields, including software development, design, and writing.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="quaternary-heading">
+                What is the Daily To-do List Technique?
+              </h3>
+              <p class="secondary-text">
+                The daily to-do list technique is a method of organizing and
+                prioritizing tasks for the day. It involves creating a list of
+                tasks that need to be accomplished during the day, usually
+                written down on paper or in a digital tool. The list typically
+                includes both personal and work-related tasks, and is organized
+                in order of importance or urgency. Throughout the day, tasks are
+                checked off as they are completed, providing a sense of
+                accomplishment and progress.
+              </p>
+            </div>
+        
+        </section>
+      </inner-column>
+    </section>
+
+    <footer>
+      <inner-column>
+        <h4 class="primary-text">Built by 
+          <a href="">Alex Vong</a>
+        </h4>
+      </inner-column>
+    </footer>
+  </body>
+</html>
+
+
+
+
+
+  <!-- HTML Meta Tags -->
+  <title>Pomofocus</title>
+  <meta name="description" content="A simple Pomodoro Timer app that works on a desktop & mobile browser. Pomofucus will help you manage your time and let you focus on any tasks such as study, writing, or coding.">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://pomofocus.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pomofocus">
+  <meta property="og:description" content="A simple Pomodoro Timer app that works on a desktop & mobile browser. Pomofucus will help you manage your time and let you focus on any tasks such as study, writing, or coding.">
+  <meta property="og:image" content="https://pomofocus.io/images/ogimage.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="pomofocus.io">
+  <meta property="twitter:url" content="https://pomofocus.io/">
+  <meta name="twitter:title" content="Pomofocus">
+  <meta name="twitter:description" content="A simple Pomodoro Timer app that works on a desktop & mobile browser. Pomofucus will help you manage your time and let you focus on any tasks such as study, writing, or coding.">
+  <meta name="twitter:image" content="https://pomofocus.io/images/ogimage.png">
+
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+        

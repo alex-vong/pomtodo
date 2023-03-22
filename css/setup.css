@@ -1,0 +1,182 @@
+/* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+p a {
+  display: inline;
+  color: inherit;
+  /* text-decoration: underline; */
+}
+
+picture {
+  display: block;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  /* may need height: 100%; Check all browsers */
+}
+
+button {
+  font-family: 'Varela Round', sans-serif;
+  font-family: 'Arimo', sans-serif;
+
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+}
+
+.flex {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+h3 {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 5%;
+  height: 4px;
+  background-color: var(--background);
+}
+
+.main-heading {
+  font-size: clamp(24px, 2.2vw, 30px);
+}
+
+.secondary-heading {
+  font-size: clamp(28px, 2.3vw, 36px);
+  font-weight: 500;
+}
+.secondary-heading {
+  font-size: clamp(28px, 2.3vw, 36px);
+  font-weight: 700;
+}
+.tertiary-heading {
+  font-size: clamp(22px, 2.3vw, 24px);
+  font-weight: 600;
+}
+.quaternary-heading {
+  font-size: clamp(20px, 2.3vw, 22px);
+  font-weight: 600;
+}
+
+.main-text {
+  font-size: clamp(18px, 2vw, 20px);
+}
+
+.secondary-text {
+  font-size: 16px;
+  font-weight: 600;
+  /* font-family: 'Varela Round', sans-serif; */
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid var(--white);
+}
+
+select:focus {
+  outline: none;
+}
+
+:root {
+  --white: #f1f1f1;
+  --black: #191919;
+  --dark-accent: #494141;
+  --background: #387097;
+  --accent: #2a7e19;
+  --dark-accent: #7a7a7a;
+
+  --card-bg: rgba(255, 255, 255, 0.2);
+  --card-bg-hover: rgba(255, 255, 255, 0.3);
+
+  --transition-05: 0.5s ease-in-out;
+}
+
+[data-theme='pomodoro'] {
+  --white: #f1f1f1;
+  --black: #191919;
+  --background: #387097;
+  --accent: #2a7e19;
+  --dark-accent: #7a7a7a;
+
+  --card-bg: rgba(255, 255, 255, 0.2);
+  --card-bg-hover: rgba(255, 255, 255, 0.3);
+}
+[data-theme='short-break'] {
+  --background: #2a7e19;
+  --accent: #d26b11;
+  --dark-accent: #7a7a7a;
+}
+[data-theme='long-break'] {
+  --background: #d26b11;
+  --accent: #387097;
+  --dark-accent: #7a7a7a;
+}
+
+/* states */
+button:active {
+  transform: translateY(3px);
+}
+.hidden {
+  display: none;
+}
+
+.btn-bg {
+  background-color: var(--card-bg);
+  padding: 10px;
+}
+
+li .edit--active {
+  color: var(--background);
+  font-weight: 500;
+
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
+
+li .edit__text--active {
+  color: #ccc;
+  font-weight: 700;
+}
+
+.edit-btn--active {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.list-item--checked-off {
+  text-decoration: line-through;
+  color: var(--dark-accent);
+}
+
+.todo-list-ul i.icon--checked-off {
+  color: green;
+}

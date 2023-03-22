@@ -1,0 +1,327 @@
+@import 'meyer-reset.css';
+@import 'setup.css';
+@import 'structure.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Varela+Round&display=swap');
+
+/* --------------------------------- Header --------------------------------- */
+
+header,
+main {
+  background-color: var(--background);
+  transition: var(--transition-05);
+}
+
+.header__wrapper {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 15px 0;
+
+  border-bottom: 1px solid rgba(168, 168, 168, 0.5);
+}
+
+.header__logo {
+  gap: 5px;
+}
+.header__logo__image picture img {
+  max-width: clamp(24px, 2.5vw, 30px);
+}
+
+.header__logo__heading {
+  font-weight: 700;
+}
+
+.header__nav-link {
+  align-self: center;
+}
+
+.header__nav-link:hover,
+button[type='submit']:hover {
+  background-color: var(--card-bg-hover);
+  transition: var(--transition-05);
+}
+
+/* greeting message */
+.main__date {
+  padding: 30px 10px 10px;
+  text-align: center;
+}
+
+/* --------------------------------- Pomodoro --------------------------------- */
+
+main {
+  min-height: 100vh;
+}
+
+.main__pomodoro__wrapper {
+  margin-bottom: 80px;
+}
+.main__card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  padding: 20px 10px;
+
+  background-color: var(--card-bg);
+}
+
+.main__card__digitals {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.main__card__digitals .primary-text {
+  font-weight: 600;
+}
+
+.main__card__states {
+  gap: 5px;
+}
+.main__card__states button {
+  padding: 10px;
+  font-weight: 600;
+}
+
+.main__card__timer {
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.main__card__start {
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+}
+
+.main__card__start button {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 10px 0;
+  padding: 15px 30px;
+  background-color: white;
+  box-shadow: rgb(230, 230, 230) 0px 6px 0px;
+  color: var(--background);
+}
+
+.main__card__states .main__card__btn--active {
+  background-color: var(--background);
+  font-weight: 700;
+  transition: var(--transition-05);
+}
+
+.main__card__buttons {
+  justify-content: center;
+  gap: 10px;
+}
+
+/* --------------------------------- Todo List --------------------------------- */
+
+/* heading */
+.todo-list {
+  /* color: var(--black); */
+  background-color: var(--background);
+  margin-bottom: 80px;
+  transition: var(--transition-05);
+}
+
+.todo-list-wrapper {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo-list__heading {
+  justify-content: center;
+  gap: 10px;
+}
+
+/* form  input todo */
+.todo-list__form {
+  justify-content: center;
+}
+
+.todo-list input {
+  flex-grow: 2;
+  padding: 5px 8px;
+  font-weight: 500;
+}
+
+.todo-list input:focus {
+  outline: 2px solid var(--accent);
+  border: none;
+}
+
+.todo-list__form__btn {
+  padding: 10px;
+  background-color: var(--card-bg);
+}
+
+/* filter todos  */
+.todo-list-filter input {
+  width: 100%;
+}
+
+/* todo status bar */
+.tl-status {
+  border-bottom: 1px solid rgba(168, 168, 168, 0.5);
+  padding-bottom: 20px;
+}
+
+.tl-status-wrapper {
+  justify-content: space-between;
+}
+
+.tl-status-wrapper span {
+  padding: 10px 20px;
+}
+
+.tl-status-active {
+  background: var(--card-bg);
+}
+
+.todo-list-filter input {
+  background-color: var(--card-bg);
+  color: var(--white);
+  border: none;
+  padding: 12px 10px;
+}
+
+.todo-list-filter input::placeholder {
+  color: var(--white);
+}
+
+/* --------------------------------- List Items --------------------------------- */
+
+.todo-list-ul {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-list-ul > li {
+  justify-content: space-between;
+  padding: 20px 10px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.list-item-settings {
+  position: relative;
+}
+
+.list-item-task-menu {
+  /* display: none; */
+  position: absolute;
+  right: -5px;
+  background: var(--white);
+  padding: 5px;
+  box-shadow: 0 0 6px rgb(0 0 0 / 0.15);
+  z-index: 2;
+
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: top right;
+}
+
+.list-item-task-menu__active {
+  transform: scale(1);
+}
+
+.todo-list-ul i {
+  color: var(--dark-accent);
+  font-size: 16px;
+}
+
+/* animated for deleting item */
+i.deleted-item {
+  color: red;
+  scale: 1.2;
+  animation: shake 0.5s;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(36deg);
+  }
+  20% {
+    transform: rotate(72deg);
+  }
+  30% {
+    transform: rotate(108deg);
+  }
+  40% {
+    transform: rotate(144deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(216deg);
+  }
+  70% {
+    transform: rotate(252deg);
+  }
+
+  80% {
+    transform: rotate(288deg);
+  }
+  90% {
+    transform: rotate(324deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------------------------------- About Section --------------------------------- */
+
+.about {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(168, 168, 168, 0.5);
+
+  line-height: 1.5;
+}
+
+.about .flex {
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about .about-docs__heading {
+  gap: 40px;
+}
+
+.about h2 {
+  line-height: 1.3;
+}
+
+.about h3 {
+  margin-bottom: 10px;
+}
+
+.about .secondary-text {
+  color: var(--dark-accent);
+  /* font-weight: 500; */
+}
+
+/* --------------------------------- Footer --------------------------------- */
+footer {
+  /* text-align: center; */
+  background-color: var(--background);
+}
+
+footer a {
+  display: inline-block;
+  font-weight: 600;
+}
+
+footer h4 {
+  font-weight: 500;
+  padding: 30px 0;
+}
