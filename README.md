@@ -4,7 +4,7 @@
 
 ##### To view this application live, click here [Pomtodo](https://alexvong.dev/modules/pomtodo).
 
-## What is Pomtodo?
+## What is PomTodo?
 
 PomTodo is a web application that integrates two essential productivity tools - a _pomodoro timer_ and a _todo list_. Its purpose is to assist users in remaining focused on any given
 task, be it studying, writing, designing, or coding.
@@ -15,7 +15,7 @@ I was inspired by the Pomodoro Technique and the daily to-do list method, which 
 
 ## What is the Pomodoro Technique?
 
-The **Pomodoro Technique** is a time management method that was developed by **Francesco Cirillo** in the late 1980s. The technique involves breaking down work into intervals, typically 25 minutes in length, separated by short breaks. Each interval is known as a _**pomodoro**_, which is Italian for _**tomato**_, named after the tomato-shaped kitchen timer that Cirillo used to time his work sessions. After four pomodoros, a longer break of around 15 to 30 minutes is taken. The technique is designed to improve focus and productivity by reducing the impact of internal and external distractions on work performance. It is widely used in various fields, including software development, design, and writing.
+The **Pomodoro Technique** is a time management method that was developed by **Francesco Cirillo** in the late 1980s. The technique involves breaking down work into intervals, typically 25 minutes in length, separated by short breaks. Each interval is known as a _**pomodoro**_, which is Italian for _**tomato**_, named after the tomato-shaped kitchen timer that **Cirillo** used to time his work sessions. After four pomodoros, a longer break of around 15 to 30 minutes is taken. The technique is designed to improve focus and productivity by reducing the impact of internal and external distractions on work performance. It is widely used in various fields, including software development, design, and writing.
 
 ## What is the Daily To-do List Technique?
 
@@ -25,9 +25,9 @@ The daily to-do list technique is a method of organizing and prioritizing tasks 
 
 1. **Determine the task you want to accomplish:** Choose a specific task you want to work on for the next 25 minutes.
 
-1. **Set the Pomodoro timer:** Click on the **start** button on the **Pomodoro** (blue) section and work on your task for the enxt 25 minutes.
+1. **Set the Pomodoro timer:** Click on the **start** button on the **Pomodoro** (blue) section and work on your task for the next 25 minutes.
 
-1. **Take a break**: Once the timer goes off, go to the **short-break** page of **PomTodo** and start the 5 minute timer. An interval counter will also update so you know what interval you are on
+1. **Take a break**: Once the timer goes off, go to the **short-break** page of **PomTodo** and start the 5 minute timer. An interval counter will also update so you know what interval you are on.
 
 1. **Repeat the cycle:** After the 5-minute break, start another 25-minute Pomodoro session and continue working on your task. Repeat this cycle of 25 minutes of work and 5 minutes of break until you have completed four Pomodoros.
 
@@ -38,10 +38,10 @@ The daily to-do list technique is a method of organizing and prioritizing tasks 
 ## How to use the Todo List:
 
 1. **Creating a task:** Enter a task in the input and press enter or click on the **Add Task** button.
-1. **Reading Task:** Each task added will be displayed on the screen
+1. **Reading Task:** Each task added will be displayed on the screen.
 1. **Updating Task:** to edit a task you can click on the **edit** icon next to the task you wish to update. To complete a task, click on the **check** icon.
 1. **Deleting Task:** to **delete** a task, click on the **trash can** icon next to the next you wish to delete. To delete all task, click on the **Delete All** button under the task list.
-1. **Filtering Task:** to **filter** task, enter the task you want to filter on the filter input
+1. **Filtering Task:** to **filter** task, enter the task you want to filter on the filter input.
 
 ## Tools Used:
 
