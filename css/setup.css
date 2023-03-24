@@ -114,6 +114,10 @@ select:focus {
   --accent: #2a7e19;
   --dark-accent: #7a7a7a;
 
+  --pomodoro: #387097;
+  --long-break: #2a7e19;
+  --short-break: #d26b11;
+
   --card-bg: rgba(255, 255, 255, 0.2);
   --card-bg-hover: rgba(255, 255, 255, 0.3);
 
@@ -179,4 +183,24 @@ li .edit__text--active {
 
 .todo-list-ul i.icon--checked-off {
   color: green;
+}
+
+.how-list-list__item__bold {
+  color: var(--background);
+  font-weight: 600;
+}
+
+.pomodoro-accent {
+  color: var(--pomodoro);
+}
+.short-break-accent {
+  color: var(--short-break);
+}
+.long-break-accent {
+  color: var(--long-break);
+}
+
+.icon {
+  color: var(--accent);
+  font-weight: 500;
 }
