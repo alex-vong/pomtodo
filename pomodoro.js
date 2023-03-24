@@ -117,7 +117,7 @@ function setUpStorageTimes() {
     itemsInStorage = [
       { state: 'pomodoro', time: 1500 }, // 25 minutes in seconds
       { state: 'short-break', time: 300 }, // 5 minutes in seconds
-      { state: 'long-break', time: 600 }, // 10 minutes in seconds
+      { state: 'long-break', time: 1200 }, // 20 minutes in seconds
     ];
   } else {
     itemsInStorage = JSON.parse(localStorage.getItem('times'));
