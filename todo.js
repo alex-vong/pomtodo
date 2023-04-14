@@ -72,11 +72,10 @@ function createItem(newTodo, item) {
   const todo = document.createElement('p');
 
   if (item && item.status === 'complete') {
-    todo.className = `primary-text completed`;
+    todo.className = `secondary-text completed`;
   } else {
-    todo.className = `primary-text`;
+    todo.className = `secondary-text`;
   }
-  //   todo.className = `primary-text`;
 
   todo.textContent = newTodo;
 
@@ -343,7 +342,7 @@ function changeFilterState(input) {
 function createNoTaskCard() {
   const tlStatus = document.querySelector('.tl-status');
   const noTaskHeading = document.createElement('div');
-  noTaskHeading.className = 'primary-text no-task-alert';
+  noTaskHeading.className = 'secondary-text no-task-alert';
   noTaskHeading.textContent =
     'There are no task. Add a new task to begin your day!';
 
@@ -353,7 +352,7 @@ function createNoTaskCard() {
 }
 
 function generateAllReadyExistMsg(todo) {
-  existMsg.className = 'primary-text already-exist';
+  existMsg.className = 'secondary-text already-exist';
   existMsg.textContent = `"${todo}" already exist!`;
 
   itemForm.insertAdjacentElement('afterend', existMsg);
