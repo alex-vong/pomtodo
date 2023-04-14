@@ -208,6 +208,10 @@ main {
   color: var(--black);
 }
 
+.todo-list-ul > li p.secondary-text {
+  font-weight: 400;
+}
+
 .list-item-settings {
   position: relative;
 }
