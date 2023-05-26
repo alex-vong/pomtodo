@@ -2,7 +2,19 @@
 
 #### A web application that integrates two essential productivity tools - a pomodoro timer and a todo list.
 
-##### To view this application live, click here [Pomtodo](https://alexvong.dev/modules/pomtodo).
+## Installation
+
+To run the website locally, follow these steps:
+
+1. **Clone the repository**: `git clone https://github.com/alex-vong/cinefiles`
+2. **Navigate to the project directory**: `cd cinefile`
+3. Open the **`index.html`** file in your web browser.
+
+Feel free to explore the code and make any modifications according to your needs.
+
+## Live Demo
+
+Check out the live demo of **CineFile [here](https://alexvong.dev/modules/pomtodo)**.
 
 ## What is PomTodo?
 
@@ -54,7 +66,18 @@ The daily to-do list technique is a method of organizing and prioritizing tasks 
 - Affinity Designer
 - AWS
 
+## Live Demo
+
+Check out the live demo of **CineFile [here](https://alexvong.dev/modules/cinefiles)**.
 ![screenshot of pomodoro timer](/images/pomo-img.png)
 ![screenshot of short-break timer](/images/short-break.png)
 ![screenshot of long-break timer](/images/long-break.png)
 ![screenshot of todo list](/images/todo.png)
+
+## Contributing
+
+If you would like to contribute to **CineFile**, please follow the guidelines in **[CONTRIBUTING.md](link-to-contributing.md)**.
+
+## License
+
+This project is licensed under the **[MIT License](link-to-license.md)**. You are free to use, modify, and distribute the code as per the terms of the license.
