@@ -6,15 +6,15 @@
 
 To run the website locally, follow these steps:
 
-1. **Clone the repository**: `git clone https://github.com/alex-vong/cinefiles`
-2. **Navigate to the project directory**: `cd cinefile`
+1. **Clone the repository**: `git clone https://github.com/alex-vong/pomtodo`
+2. **Navigate to the project directory**: `cd pomtodo`
 3. Open the **`index.html`** file in your web browser.
 
 Feel free to explore the code and make any modifications according to your needs.
 
 ## Live Demo
 
-Check out the live demo of **CineFile [here](https://alexvong.dev/modules/pomtodo)**.
+Check out the live demo of **Pomtodo [here](https://alexvong.dev/modules/pomtodo)**.
 
 ## What is PomTodo?
 
@@ -66,9 +66,8 @@ The daily to-do list technique is a method of organizing and prioritizing tasks 
 - Affinity Designer
 - AWS
 
-## Live Demo
+## Images
 
-Check out the live demo of **CineFile [here](https://alexvong.dev/modules/cinefiles)**.
 ![screenshot of pomodoro timer](/images/pomo-img.png)
 ![screenshot of short-break timer](/images/short-break.png)
 ![screenshot of long-break timer](/images/long-break.png)
@@ -76,7 +75,7 @@ Check out the live demo of **CineFile [here](https://alexvong.dev/modules/cinefi
 
 ## Contributing
 
-If you would like to contribute to **CineFile**, please follow the guidelines in **[CONTRIBUTING.md](link-to-contributing.md)**.
+If you would like to contribute to **Pomtodo**, please follow the guidelines in **[CONTRIBUTING.md](link-to-contributing.md)**.
 
 ## License
 
