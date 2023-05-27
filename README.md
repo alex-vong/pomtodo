@@ -75,7 +75,7 @@ The daily to-do list technique is a method of organizing and prioritizing tasks 
 
 ## Contributing
 
-If you would like to contribute to **CineFile**, please follow the guidelines in **[CONTRIBUTING.md](link-to-contributing.md)**.
+If you would like to contribute to **Pomtodo**, please follow the guidelines in **[CONTRIBUTING.md](link-to-contributing.md)**.
 
 ## License
 
